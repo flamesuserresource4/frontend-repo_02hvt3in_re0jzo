@@ -7,15 +7,16 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[92vh] w-full flex items-stretch justify-center overflow-hidden bg-slate-950"
     >
-      {/* Spline full-width cover background */}
+      {/* Spline full-width animated cover background */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/4Tf9WOIaWs6LOezG/scene.splinecode"
+          scene="https://prod.spline.design/ShS6h2HOKd20s1py/scene.splinecode"
           style={{ width: "100%", height: "100%" }}
         />
-        {/* Soft gradient overlays to improve contrast while keeping interaction */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/20 to-slate-950/80" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-950/60 via-transparent to-slate-950/60" />
+        {/* Warm gradient overlays for readability without blocking interaction */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/80" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-rose-500/10" />
+        <div className="pointer-events-none absolute -inset-x-10 -top-10 h-40 bg-gradient-to-b from-amber-400/20 to-transparent blur-2xl" />
       </div>
 
       {/* Content */}
@@ -27,19 +28,19 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
               Python Software Developer
             </div>
 
             <h1 className="mt-5 text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
-              High‑performance backends and automation
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-                built with Python
+              Building elegant systems
+              <span className="block bg-gradient-to-r from-amber-300 via-rose-300 to-yellow-400 bg-clip-text text-transparent">
+                with Python, fast and scalable
               </span>
             </h1>
 
             <p className="mt-4 text-white/80 max-w-2xl">
-              I design and ship reliable APIs, data pipelines, and tooling. Clean architecture, robust tests, and cloud‑ready performance.
+              I craft robust APIs, data workflows, and automation. Clean design, strong testing, and cloud-native performance.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
